@@ -1,0 +1,72 @@
+{
+  "SFW": true,
+  "MAX_PARAGRAPHS": 2,
+  "INVENTORY_LIMIT": 5,
+  "COMMANDS": [
+    "look",
+    "move <place>",
+    "go <direction>",
+    "take <item>",
+    "drop <item>",
+    "use <item>",
+    "use <item> on <target>",
+    "talk <npc>",
+    "attack <target>",
+    "search",
+    "open <object>",
+    "inventory",
+    "help",
+    "save",
+    "load",
+    "quit"
+  ],
+  "LOCKS": {
+    "Ancient Gate": "have_golden_key",
+    "Dragon's Lair": "have_dragon_permit",
+    "Secret Chamber": "solved_riddle"
+  },
+  "QUEST": {
+    "name": "Recover the Stolen Crown",
+    "goal_flag": "crown_recovered",
+    "intro": "The village elder begs you to recover the Crown of Light, stolen by bandits and hidden in the Ancient Ruins. Return it to save the village from darkness."
+  },
+  "END_CONDITIONS": {
+    "WIN_ALL_FLAGS": [
+      "crown_recovered",
+      "returned_to_village"
+    ],
+    "LOSE_ANY_FLAGS": [
+      "hp_zero"
+    ],
+    "MAX_TURNS": 50
+  },
+  "START": {
+    "location": "Village Square",
+    "inventory": [],
+    "flags": {},
+    "hp": 10
+  },
+  "WORLD_DESCRIPTION": {
+    "Village Square": "The heart of a small village. You see the Elder's house to the north, a market to the east, and a path to the ruins to the west.",
+    "Elder's House": "A simple cottage with warm firelight. The village elder awaits your return.",
+    "Market": "A few market stalls. The merchant might have useful items.",
+    "Forest Path": "A winding trail through dense woods, leading toward the Ancient Ruins.",
+    "Ancient Ruins": "Crumbling stone structures from a forgotten age. The entrance to the Ancient Gate looms ahead.",
+    "Ancient Gate": "A massive sealed gate covered in mystical runes. It requires a golden key.",
+    "Inner Chamber": "A torch-lit room with ancient murals. You sense treasure nearby.",
+    "Secret Chamber": "A hidden vault. The Crown of Light rests on a pedestal!"
+  },
+  "ITEMS": {
+    "torch": "A wooden torch that provides light",
+    "rope": "A coil of sturdy rope",
+    "golden_key": "An ornate golden key with mystical engravings",
+    "health_potion": "A small vial of red liquid that restores health",
+    "crown": "The Crown of Light - a radiant golden crown"
+  },
+  "NPCS": {
+    "Elder": "The wise village elder who gave you the quest",
+    "Merchant": "A friendly trader who sells supplies",
+    "Bandit": "A dangerous outlaw guarding the ruins",
+    "Mysterious Sage": "An old wizard who knows ancient secrets"
+  }
+}
